@@ -1,0 +1,30 @@
+.containergun {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 900px; /* Define la perspectiva para las transformaciones 3D */
+  /* Mueve el contenedor hacia arriba 50 píxeles */
+}
+
+.glock {
+  top: -200px; /* Mueve el contenedor hacia arriba 50 píxeles */
+  width: 200px;
+  height: 200px;
+  background-image: url("https://caddin.com/wp-content/uploads/2021/04/P380.png");
+  background-size: cover;
+  position: relative;
+  transform-style: preserve-3d; /* Permite que los elementos internos conserven su propia transformación 3D */
+  animation: rotate 5s infinite linear; /* Animación de rotación */
+}
+
+/* Keyframes para la animación de rotación */
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
